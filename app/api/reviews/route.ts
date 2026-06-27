@@ -1,20 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server'
-import fs from 'fs'
-import path from 'path'
+import { Redis } from '@upstash/redis'
 
-const filePath = path.join(process.cwd(), 'data', 'reviews.json')
+const redis = new Redis({
+  url: process.env.UPSTASH_REDIS_REST_URL!,
+  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
+})
 
-function readReviews() {
-  const raw = fs.readFileSync(filePath, 'utf-8')
-  return JSON.parse(raw)
-}
+const KEY = 'reviews'
 
-function writeReviews(reviews: unknown[]) {
-  fs.writeFileSync(filePath, JSON.stringify(reviews, null, 2), 'utf-8')
+interface Review {
+  id: number
+  name: string
+  text: string
+  rating: number
+  createdAt: string
 }
 
 export async function GET() {
-  const reviews = readReviews()
+  const reviews = (await redis.get<Review[]>(KEY)) ?? []
   return NextResponse.json(reviews)
 }
 
@@ -26,8 +29,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Name and text are required' }, { status: 400 })
   }
 
-  const reviews = readReviews()
-  const newReview = {
+  const reviews = (await redis.get<Review[]>(KEY)) ?? []
+  const newReview: Review = {
     id: Date.now(),
     name: name.trim().slice(0, 60),
     text: text.trim().slice(0, 500),
@@ -35,7 +38,7 @@ export async function POST(req: NextRequest) {
     createdAt: new Date().toISOString(),
   }
   reviews.unshift(newReview)
-  writeReviews(reviews)
+  await redis.set(KEY, reviews)
 
   return NextResponse.json(newReview, { status: 201 })
 }
