@@ -16,7 +16,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="text-white/25 text-xs text-center">
-          © {new Date().getFullYear()} Аліна Татур. Всі права захищені. Прага, Чехія.
+          © {new Date().getFullYear()} Аліна Татур. Всі права захищені.
         </p>
         <div className="flex gap-4">
           <a href="https://wa.me/380979217886" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-gold-400 text-xs transition-colors">
