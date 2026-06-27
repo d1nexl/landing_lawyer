@@ -62,7 +62,7 @@ export default function Contact() {
     {
       icon: <Facebook size={20} className="text-gold-500" />,
       label: 'Facebook',
-      value: 'Аліна Татур',
+      value: 'Аліна Татару',
       href: 'https://www.facebook.com/UristAlinaTataru26',
     },
   ]
@@ -100,11 +100,11 @@ export default function Contact() {
           >
             {/* Photo */}
             <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden hidden lg:block">
-              <Image src="/alina-3.jpg" alt="Аліна Татур" fill className="object-cover" style={{ objectPosition: '50% 20%' }} />
+              <Image src="/alina-3.jpg" alt="Аліна Татару" fill className="object-cover" style={{ objectPosition: '50% 20%' }} />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent" />
               {/* Overlay text */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="font-display text-2xl text-white font-semibold">Аліна Татур</p>
+                <p className="font-display text-2xl text-white font-semibold">Аліна Татару</p>
                 <p className="text-gold-400 text-sm mt-1">Юрист за кордоном</p>
               </div>
             </div>

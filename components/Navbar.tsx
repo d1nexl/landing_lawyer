@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Scale } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
-import { Lang } from '@/lib/translations'
+import { Lang, aboutTranslations } from '@/lib/translations'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 
 const langs: { code: Lang; label: string }[] = [
@@ -17,6 +19,9 @@ export default function Navbar() {
   const { t, lang, setLang } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isAbout = pathname === '/about'
+  const at = aboutTranslations[lang as Lang]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -34,7 +39,11 @@ export default function Navbar() {
   ]
 
   const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    if (isAbout) {
+      window.location.href = `/#${id}`
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }
     setMenuOpen(false)
   }
 
@@ -53,7 +62,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <button onClick={() => scrollTo('hero')} className="flex items-center gap-3 group">
+          <button onClick={() => isAbout ? (window.location.href = '/') : scrollTo('hero')} className="flex items-center gap-3 group">
             <div className="w-9 h-9 rounded-full border border-gold-500/60 flex items-center justify-center group-hover:border-gold-400 transition-colors group-hover:shadow-gold">
               <Scale size={16} className="text-gold-500 group-hover:text-gold-400 transition-colors" />
             </div>
@@ -64,7 +73,7 @@ export default function Navbar() {
           </button>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -74,6 +83,17 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
+            <Link
+              href={isAbout ? '/' : '/about'}
+              className={clsx(
+                'text-sm font-sans tracking-wide transition-colors duration-200 px-3 py-1.5 rounded-full border',
+                isAbout
+                  ? 'border-gold-500 bg-gold-500/10 text-gold-400'
+                  : 'border-gold-500/40 text-gold-400/80 hover:text-gold-400 hover:border-gold-500'
+              )}
+            >
+              {at.nav}
+            </Link>
           </div>
 
           {/* Right: lang switcher + CTA */}
@@ -129,6 +149,19 @@ export default function Navbar() {
                 {link.label}
               </motion.button>
             ))}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: navLinks.length * 0.07 }}
+            >
+              <Link
+                href={isAbout ? '/' : '/about'}
+                onClick={() => setMenuOpen(false)}
+                className="font-display text-3xl font-light text-gold-400 hover:text-gold-300 transition-colors"
+              >
+                {at.nav}
+              </Link>
+            </motion.div>
 
             {/* Mobile lang switcher */}
             <div className="flex items-center gap-3 mt-4">

@@ -197,7 +197,7 @@ export default function Hero() {
             <div className="relative w-full h-full rounded-2xl overflow-hidden glow-gold">
               <Image
                 src="/alina-1.jpg"
-                alt="Аліна Татур — юрист"
+                alt="Аліна Татару — юрист"
                 fill
                 className="object-cover object-top"
                 priority

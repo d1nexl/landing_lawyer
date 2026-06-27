@@ -34,7 +34,7 @@ export default function WhyMe() {
               <div className="absolute -bottom-2 -right-2 w-12 h-12 border-b-2 border-r-2 border-gold-500/60 rounded-br-2xl" />
 
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                <Image src="/alina-2.jpg" alt="Аліна Татур" fill className="object-cover object-center" />
+                <Image src="/alina-2.jpg" alt="Аліна Татару" fill className="object-cover object-center" />
                 <div className="absolute inset-0 bg-gradient-to-b from-navy-900/20 to-navy-900/60" />
               </div>
 

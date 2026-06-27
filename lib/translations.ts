@@ -10,7 +10,7 @@ export const translations = {
     },
     hero: {
       tagline: 'Юрист за кордоном',
-      name: 'Аліна Татур',
+      name: 'Аліна Татару',
       title: 'Юридична допомога та оформлення документів у Чехії',
       subtitle: 'Допомагаю з візами, робочими картами, паспортами, працевлаштуванням та іншими питаннями документів у Празі.',
       whatsapp: 'WhatsApp',
@@ -142,7 +142,7 @@ export const translations = {
     },
     hero: {
       tagline: 'Právník v zahraničí',
-      name: 'Alina Tatur',
+      name: 'Alina Tataru',
       title: 'Právní pomoc a vyřízení dokumentů v České republice',
       subtitle: 'Pomáhám s vízy, pracovními kartami, pasy, zaměstnáváním a dalšími dokumenty v Praze.',
       whatsapp: 'WhatsApp',
@@ -256,7 +256,7 @@ export const translations = {
     },
     hero: {
       tagline: 'Lawyer Abroad',
-      name: 'Alina Tatur',
+      name: 'Alina Tataru',
       title: 'Legal Assistance & Document Services in Czech Republic',
       subtitle: 'Helping with visas, work permits, passports, employment and other document matters in Prague.',
       whatsapp: 'WhatsApp',
@@ -360,5 +360,192 @@ export const translations = {
   },
 }
 
+export const aboutTranslations = {
+  uk: {
+    nav: 'Про мене',
+    hero: {
+      eyebrow: 'Про мене',
+      name: 'Аліна Татару',
+      title: 'Юрист та психолог — дві професії, які гармонійно поєдналися у моїй діяльності',
+      subtitle: 'Більше ніж юридична допомога — це людяний підхід, глибоке розуміння та 8 років навчання на службі у вас.',
+      cta: 'Зв\'язатися зі мною',
+    },
+    story: {
+      label: 'Моя історія',
+      title: 'Хто я?',
+      p1: 'Мене звати Аліна, мені 32 роки. Я — практикуючий юрист із освітою, здобутою в Академії правознавства, та дипломований психолог. Ці дві професії органічно поєдналися: я не лише вирішую юридичні питання, а й чудово розумію людей, знаходжу підхід до кожного клієнта та роблю складні процеси зрозумілими і комфортними.',
+      p2: 'Я навчалася в Україні та Польщі, маю диплом міжнародного зразка, що дає мені право практикувати по всій Європі та Україні. 8 років навчання — це не просто цифра, це фундамент, на якому будується кожна моя консультація.',
+      p3: 'Наразі я базуюсь у Празі (Чехія), але приймаю онлайн-замовлення з будь-якої країни. Допомагаю людям, які знаходяться у своїй країні, з пошуком роботи в Чехії, оформленням документів, підготовкою до переїзду — дистанційно, швидко та ефективно.',
+    },
+    professions: {
+      label: 'Дві спеціальності',
+      title: 'Право + Психологія = Результат',
+      law: {
+        title: 'Юрист',
+        desc: 'Академія правознавства, диплом міжнародного зразка. Компетентна у сферах міграційного права, трудового законодавства та оформлення документів у Чехії та Європі.',
+      },
+      psych: {
+        title: 'Психолог',
+        desc: 'Освіта психолога дозволяє мені знаходити індивідуальний підхід до кожного. Зі мною легко спілкуватися — я слухаю, розумію та пояснюю складне простими словами.',
+      },
+    },
+    education: {
+      label: 'Освіта',
+      title: '8 років навчання',
+      subtitle: 'Два дипломи, дві країни, один результат — ваш спокій та впевненість',
+      items: [
+        { year: 'Україна', title: 'Академія правознавства', desc: 'Юридична освіта вищого рівня. Глибоке вивчення права, законодавства та юридичної практики.' },
+        { year: 'Польща', title: 'Диплом міжнародного зразка', desc: 'Навчання за кордоном. Диплом, визнаний по всій Європі, що дає право практикувати в ЄС.' },
+        { year: '+', title: 'Психологічна освіта', desc: 'Другий диплом, який доповнює юридичну практику — розуміння людської поведінки та індивідуальний підхід.' },
+      ],
+    },
+    geography: {
+      label: 'Де я працюю',
+      title: 'Онлайн та офлайн — без кордонів',
+      subtitle: 'Не обов\'язково бути в Чехії, щоб отримати мою допомогу',
+      items: [
+        { flag: '🇨🇿', place: 'Чехія', desc: 'Особисті зустрічі, супровід у держ. установах, оформлення документів на місці.' },
+        { flag: '🇺🇦', place: 'Україна', desc: 'Дистанційна підготовка документів, консультації щодо переїзду та пошуку роботи.' },
+        { flag: '🌍', place: 'Весь світ', desc: 'Онлайн-консультації для будь-кого, де б ви не знаходились.' },
+      ],
+    },
+    values: {
+      label: 'Мої цінності',
+      title: 'Чому клієнти повертаються',
+      items: [
+        { title: 'Індивідуальний підхід', desc: 'Кожна людина унікальна. Я ніколи не даю шаблонних відповідей — лише рішення під вашу ситуацію.' },
+        { title: 'Легке спілкування', desc: 'Зі мною не страшно і не складно. Пояснюю юридичне простою мовою, без зайвого стресу.' },
+        { title: 'Професійна етика', desc: 'Чесність, конфіденційність та відповідальність — основа моєї роботи.' },
+        { title: 'Реальний результат', desc: '8 років навчання та практика в Чехії — для того, щоб ви отримали те, чого прагнете.' },
+      ],
+    },
+    cta: {
+      title: 'Готові зробити перший крок?',
+      subtitle: 'Напишіть мені — перша консультація безкоштовна',
+      whatsapp: 'WhatsApp',
+      viber: 'Viber',
+    },
+  },
+  cs: {
+    nav: 'O mně',
+    hero: {
+      eyebrow: 'O mně',
+      name: 'Alina Tataru',
+      title: 'Právník a psycholog — dvě profese, které se harmonicky spojily v mé práci',
+      subtitle: 'Více než právní pomoc — lidský přístup, hluboké porozumění a 8 let vzdělání ve vašich službách.',
+      cta: 'Kontaktujte mě',
+    },
+    story: {
+      label: 'Můj příběh',
+      title: 'Kdo jsem?',
+      p1: 'Jmenuji se Alina, je mi 32 let. Jsem praktikující právník s vzděláním z Akademie právní vědy a diplomovaný psycholog. Tyto dvě profese se organicky spojily: nejen řeším právní otázky, ale také výborně rozumím lidem, nacházím přístup ke každému klientovi a složité procesy zjednodušuji.',
+      p2: 'Studovala jsem na Ukrajině a v Polsku, mám diplom mezinárodního standardu, který mi dává právo působit v celé Evropě a na Ukrajině. 8 let studia — to není jen číslo, to je základ, na kterém je postavena každá moje konzultace.',
+      p3: 'Momentálně sídlím v Praze (Česká republika), ale přijímám online objednávky z jakékoli země. Pomáhám lidem, kteří jsou ve své zemi, s hledáním práce v ČR, vyřízením dokumentů, přípravou na stěhování — na dálku, rychle a efektivně.',
+    },
+    professions: {
+      label: 'Dvě specializace',
+      title: 'Právo + Psychologie = Výsledek',
+      law: { title: 'Právník', desc: 'Akademie právní vědy, diplom mezinárodního standardu. Kompetentní v oblasti migračního práva, pracovního práva a vyřizování dokumentů v ČR a Evropě.' },
+      psych: { title: 'Psycholog', desc: 'Vzdělání psychologa mi umožňuje nacházet individuální přístup ke každému. Se mnou se snadno komunikuje — naslouchám, rozumím a vysvětluji složité věci jednoduchými slovy.' },
+    },
+    education: {
+      label: 'Vzdělání',
+      title: '8 let studia',
+      subtitle: 'Dva diplomy, dvě země, jeden výsledek — váš klid a jistota',
+      items: [
+        { year: 'Ukrajina', title: 'Akademie právní vědy', desc: 'Vysokoškolské právní vzdělání. Hluboké studium práva, legislativy a právní praxe.' },
+        { year: 'Polsko', title: 'Diplom mezinárodního standardu', desc: 'Studium v zahraničí. Diplom uznaný v celé Evropě, opravňující k výkonu praxe v EU.' },
+        { year: '+', title: 'Psychologické vzdělání', desc: 'Druhý diplom, který doplňuje právní praxi — porozumění lidskému chování a individuální přístup.' },
+      ],
+    },
+    geography: {
+      label: 'Kde pracuji',
+      title: 'Online i offline — bez hranic',
+      subtitle: 'Nemusíte být v České republice, abyste získali mou pomoc',
+      items: [
+        { flag: '🇨🇿', place: 'Česká republika', desc: 'Osobní schůzky, doprovod na úřady, vyřizování dokumentů na místě.' },
+        { flag: '🇺🇦', place: 'Ukrajina', desc: 'Dálková příprava dokumentů, konzultace ohledně stěhování a hledání práce.' },
+        { flag: '🌍', place: 'Celý svět', desc: 'Online konzultace pro kohokoli, kdekoli se nacházíte.' },
+      ],
+    },
+    values: {
+      label: 'Moje hodnoty',
+      title: 'Proč se klienti vrací',
+      items: [
+        { title: 'Individuální přístup', desc: 'Každý člověk je jedinečný. Nikdy nedávám šablonové odpovědi — pouze řešení pro vaši situaci.' },
+        { title: 'Snadná komunikace', desc: 'Se mnou se není čeho bát. Vysvětluji právní věci jednoduchým jazykem, bez zbytečného stresu.' },
+        { title: 'Profesionální etika', desc: 'Čestnost, důvěrnost a odpovědnost — základ mé práce.' },
+        { title: 'Skutečný výsledek', desc: '8 let studia a praxe v ČR — abyste dostali to, oč usilujete.' },
+      ],
+    },
+    cta: {
+      title: 'Připraveni udělat první krok?',
+      subtitle: 'Napište mi — první konzultace zdarma',
+      whatsapp: 'WhatsApp',
+      viber: 'Viber',
+    },
+  },
+  en: {
+    nav: 'About Me',
+    hero: {
+      eyebrow: 'About Me',
+      name: 'Alina Tataru',
+      title: 'Lawyer & Psychologist — two professions that harmoniously united in my work',
+      subtitle: 'More than legal help — a human approach, deep understanding and 8 years of education at your service.',
+      cta: 'Contact Me',
+    },
+    story: {
+      label: 'My Story',
+      title: 'Who Am I?',
+      p1: 'My name is Alina, I am 32 years old. I am a practicing lawyer with a degree from the Academy of Law and a certified psychologist. These two professions have organically combined: I not only solve legal issues, but also truly understand people, find an individual approach to each client and make complex processes clear and comfortable.',
+      p2: 'I studied in Ukraine and Poland, hold an internationally recognized diploma that entitles me to practice throughout Europe and Ukraine. 8 years of study — not just a number, but the foundation upon which every consultation I give is built.',
+      p3: 'I am currently based in Prague (Czech Republic), but accept online orders from any country. I help people who are in their home country with finding work in the Czech Republic, processing documents, preparing for relocation — remotely, quickly and effectively.',
+    },
+    professions: {
+      label: 'Two Specializations',
+      title: 'Law + Psychology = Results',
+      law: { title: 'Lawyer', desc: 'Academy of Law, internationally recognized diploma. Competent in migration law, labor law and document processing in Czech Republic and Europe.' },
+      psych: { title: 'Psychologist', desc: 'Psychology education allows me to find an individual approach to everyone. I am easy to talk to — I listen, understand and explain complex things in simple words.' },
+    },
+    education: {
+      label: 'Education',
+      title: '8 Years of Study',
+      subtitle: 'Two degrees, two countries, one result — your peace of mind and confidence',
+      items: [
+        { year: 'Ukraine', title: 'Academy of Law', desc: 'Higher legal education. In-depth study of law, legislation and legal practice.' },
+        { year: 'Poland', title: 'International Standard Diploma', desc: 'Study abroad. Diploma recognized throughout Europe, entitling practice in the EU.' },
+        { year: '+', title: 'Psychology Degree', desc: 'Second degree complementing legal practice — understanding human behavior and individual approach.' },
+      ],
+    },
+    geography: {
+      label: 'Where I Work',
+      title: 'Online & Offline — No Borders',
+      subtitle: 'You don\'t need to be in Czech Republic to get my help',
+      items: [
+        { flag: '🇨🇿', place: 'Czech Republic', desc: 'Personal meetings, accompaniment to government offices, on-site document processing.' },
+        { flag: '🇺🇦', place: 'Ukraine', desc: 'Remote document preparation, consultations on relocation and job search.' },
+        { flag: '🌍', place: 'Worldwide', desc: 'Online consultations for anyone, wherever you are.' },
+      ],
+    },
+    values: {
+      label: 'My Values',
+      title: 'Why Clients Come Back',
+      items: [
+        { title: 'Individual Approach', desc: 'Every person is unique. I never give template answers — only solutions tailored to your situation.' },
+        { title: 'Easy Communication', desc: 'There\'s nothing to fear with me. I explain legal matters in simple language, without unnecessary stress.' },
+        { title: 'Professional Ethics', desc: 'Honesty, confidentiality and responsibility — the foundation of my work.' },
+        { title: 'Real Results', desc: '8 years of study and practice in Czech Republic — so you get what you\'re striving for.' },
+      ],
+    },
+    cta: {
+      title: 'Ready to Take the First Step?',
+      subtitle: 'Write to me — first consultation is free',
+      whatsapp: 'WhatsApp',
+      viber: 'Viber',
+    },
+  },
+}
+
+export type AboutT = typeof aboutTranslations.uk
 export type Lang = keyof typeof translations
 export type T = typeof translations.uk
