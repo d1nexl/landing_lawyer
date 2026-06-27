@@ -48,13 +48,13 @@ export default function Contact() {
       href: 'tel:+420723720172',
     },
     {
-      icon: <WhatsAppIcon />,
+      icon: <span className="text-gold-500"><WhatsAppIcon /></span>,
       label: t.contact.whatsapp,
       value: '+380 979 217 886',
       href: 'https://wa.me/380979217886',
     },
     {
-      icon: <ViberIcon />,
+      icon: <span className="text-gold-500"><ViberIcon /></span>,
       label: t.contact.viber,
       value: '+380 979 217 886',
       href: 'viber://chat?number=%2B380979217886',
