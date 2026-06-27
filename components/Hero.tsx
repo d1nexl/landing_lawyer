@@ -84,23 +84,18 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #FFFBF0 0%, #FFF5D6 40%, #FFFAE8 70%, #FFF8EC 100%)' }}
+      className="relative min-h-screen flex items-center overflow-hidden bg-navy-900 grid-pattern"
     >
-      {/* Particle canvas — gold dots on light bg */}
-      <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none opacity-40" />
+      {/* Particle canvas */}
+      <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
 
-      {/* Warm yellow radial glows */}
-      <div className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(245,193,50,0.18) 0%, transparent 70%)' }} />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,210,80,0.12) 0%, transparent 70%)' }} />
+      {/* Background radial glow */}
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gold-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-blue-900/20 blur-[100px] pointer-events-none" />
 
-      {/* Subtle grid on light bg */}
-      <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(180,140,40,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(180,140,40,0.06) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
-
-      {/* Top gold line */}
-      <div className="absolute top-0 left-0 right-0 h-1" style={{ background: 'linear-gradient(90deg, transparent, #E8A020, #F5C842, #E8A020, transparent)' }} />
-      {/* Bottom fade to dark */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, rgba(10,18,32,0.08))' }} />
+      {/* Decorative lines */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20 grid lg:grid-cols-2 gap-16 items-center w-full">
         {/* Left column */}
@@ -111,30 +106,28 @@ export default function Hero() {
           className="flex flex-col gap-6"
         >
           {/* Tagline */}
-          <motion.p variants={fadeUp} className="font-display text-xl italic font-light tracking-wide" style={{ color: '#B8860B' }}>
+          <motion.p variants={fadeUp} className="font-display text-gold-500/80 text-xl italic font-light tracking-wide">
             {t.hero.tagline}
           </motion.p>
 
           {/* Name */}
-          <motion.h1 variants={fadeUp} className="font-display text-6xl md:text-7xl xl:text-8xl font-semibold leading-none" style={{ color: '#0A1220' }}>
+          <motion.h1 variants={fadeUp} className="font-display text-6xl md:text-7xl xl:text-8xl font-semibold leading-none text-white">
             {t.hero.name.split(' ')[0]}{' '}
-            <span style={{ background: 'linear-gradient(135deg, #C8860A 0%, #E8A020 40%, #F5C842 70%, #E8A020 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-              {t.hero.name.split(' ')[1]}
-            </span>
+            <span className="text-gold-gradient">{t.hero.name.split(' ')[1]}</span>
           </motion.h1>
 
           {/* Title */}
-          <motion.h2 variants={fadeUp} className="font-sans text-lg md:text-xl font-light leading-relaxed max-w-lg" style={{ color: '#1a2a40' }}>
+          <motion.h2 variants={fadeUp} className="font-sans text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-lg">
             {t.hero.title}
           </motion.h2>
 
           {/* Subtitle */}
-          <motion.p variants={fadeUp} className="font-sans text-sm md:text-base leading-relaxed max-w-md" style={{ color: '#4a5a70' }}>
+          <motion.p variants={fadeUp} className="font-sans text-sm md:text-base text-white/50 leading-relaxed max-w-md">
             {t.hero.subtitle}
           </motion.p>
 
           {/* Divider */}
-          <motion.div variants={fadeUp} className="w-16 h-0.5 rounded-full" style={{ background: 'linear-gradient(90deg, #E8A020, #F5C842, #E8A020)' }} />
+          <motion.div variants={fadeUp} className="section-divider" />
 
           {/* CTA buttons */}
           <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
@@ -142,24 +135,21 @@ export default function Hero() {
               href="https://wa.me/380979217886"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
-              style={{ background: 'linear-gradient(135deg, #E8A020, #F5C842)', color: '#0A1220' }}
+              className="btn-gold inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold shadow-gold"
             >
               <WhatsAppIcon />
               {t.hero.whatsapp}
             </a>
             <a
               href="viber://chat?number=%2B380979217886"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold border-2 transition-all duration-200 hover:scale-105"
-              style={{ borderColor: '#E8A020', color: '#C8860A', background: 'rgba(232,160,32,0.08)' }}
+              className="btn-outline-gold inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold"
             >
               <ViberIcon />
               {t.hero.viber}
             </a>
             <a
               href="tel:+420723720172"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold border transition-all duration-200 hover:scale-105"
-              style={{ borderColor: 'rgba(10,18,32,0.2)', color: '#1a2a40', background: 'rgba(10,18,32,0.04)' }}
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold border border-white/15 text-white/70 hover:border-white/40 hover:text-white transition-all duration-200"
             >
               <Phone size={16} />
               {t.hero.call}
@@ -167,15 +157,15 @@ export default function Hero() {
           </motion.div>
 
           {/* Stats row */}
-          <motion.div variants={fadeUp} className="flex gap-8 pt-2">
+          <motion.div variants={fadeUp} className="flex gap-8 pt-4">
             {[
               { val: '3+', label: t.hero.statYears },
               { val: '100+', label: t.hero.statClients },
               { val: '100%', label: t.hero.statOfficial },
             ].map((s, i) => (
               <div key={i} className="flex flex-col">
-                <span className="font-display text-2xl font-semibold" style={{ color: '#C8860A' }}>{s.val}</span>
-                <span className="text-xs mt-0.5" style={{ color: '#6a7a8a' }}>{s.label}</span>
+                <span className="font-display text-2xl font-semibold text-gold-400">{s.val}</span>
+                <span className="text-xs text-white/40 mt-0.5">{s.label}</span>
               </div>
             ))}
           </motion.div>
@@ -188,23 +178,23 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           className="relative flex justify-center lg:justify-end"
         >
-          {/* Warm glow behind photo */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-80 h-80 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, rgba(245,193,50,0.35) 0%, transparent 70%)' }} />
+          {/* Glow behind photo */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-80 h-80 rounded-full bg-gold-500/10 blur-3xl animate-glow-pulse" />
           </div>
 
           {/* Photo frame */}
           <div className="relative w-80 h-[440px] md:w-96 md:h-[520px]">
             {/* Outer ring */}
-            <div className="absolute -inset-3 rounded-3xl border animate-pulse" style={{ borderColor: 'rgba(232,160,32,0.35)' }} />
+            <div className="absolute -inset-3 rounded-3xl border border-gold-500/20 animate-pulse" />
             {/* Corner accents */}
-            <div className="absolute -top-1 -left-1 w-8 h-8 border-t-2 border-l-2 rounded-tl-xl" style={{ borderColor: '#E8A020' }} />
-            <div className="absolute -top-1 -right-1 w-8 h-8 border-t-2 border-r-2 rounded-tr-xl" style={{ borderColor: '#E8A020' }} />
-            <div className="absolute -bottom-1 -left-1 w-8 h-8 border-b-2 border-l-2 rounded-bl-xl" style={{ borderColor: '#E8A020' }} />
-            <div className="absolute -bottom-1 -right-1 w-8 h-8 border-b-2 border-r-2 rounded-br-xl" style={{ borderColor: '#E8A020' }} />
+            <div className="absolute -top-1 -left-1 w-8 h-8 border-t-2 border-l-2 border-gold-500 rounded-tl-xl" />
+            <div className="absolute -top-1 -right-1 w-8 h-8 border-t-2 border-r-2 border-gold-500 rounded-tr-xl" />
+            <div className="absolute -bottom-1 -left-1 w-8 h-8 border-b-2 border-l-2 border-gold-500 rounded-bl-xl" />
+            <div className="absolute -bottom-1 -right-1 w-8 h-8 border-b-2 border-r-2 border-gold-500 rounded-br-xl" />
 
-            {/* Photo */}
-            <div className="relative w-full h-full rounded-2xl overflow-hidden" style={{ boxShadow: '0 0 50px rgba(232,160,32,0.25), 0 20px 60px rgba(0,0,0,0.15)' }}>
+            {/* Photo container — замініть /alina-1.jpg на реальне фото */}
+            <div className="relative w-full h-full rounded-2xl overflow-hidden glow-gold">
               <Image
                 src="/alina-1.jpg"
                 alt="Аліна Татару — юрист"
@@ -212,33 +202,33 @@ export default function Hero() {
                 className="object-cover object-top"
                 priority
               />
-              {/* Subtle bottom overlay */}
-              <div className="absolute bottom-0 left-0 right-0 h-1/4" style={{ background: 'linear-gradient(to top, rgba(255,248,230,0.5), transparent)' }} />
+              {/* Bottom gradient */}
+              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-navy-900/80 to-transparent" />
             </div>
 
-            {/* Floating badge — stars */}
+            {/* Floating badge */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-6 -left-6 rounded-2xl px-5 py-4 shadow-xl border"
-              style={{ background: 'rgba(255,252,240,0.95)', backdropFilter: 'blur(12px)', borderColor: 'rgba(232,160,32,0.3)' }}
+              className="absolute -bottom-6 -left-6 glass-card rounded-2xl px-5 py-4 border border-gold-500/20 shadow-card"
             >
-              <div className="flex items-center gap-1 mb-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={12} className="fill-[#E8A020]" style={{ color: '#E8A020' }} />
-                ))}
+              <div className="flex items-center gap-2">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={12} className="star-filled fill-gold-500" />
+                  ))}
+                </div>
               </div>
-              <p className="text-xs font-medium" style={{ color: '#4a5a70' }}>{t.hero.clientsBadge}</p>
+              <p className="text-xs text-white/60 mt-1">{t.hero.clientsBadge}</p>
             </motion.div>
 
-            {/* Floating tag — official */}
+            {/* Floating tag */}
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -top-4 -right-4 rounded-xl px-4 py-3 shadow-lg border"
-              style={{ background: 'rgba(255,252,240,0.95)', backdropFilter: 'blur(12px)', borderColor: 'rgba(232,160,32,0.3)' }}
+              className="absolute -top-4 -right-4 glass-card rounded-xl px-4 py-3 border border-gold-500/20"
             >
-              <p className="text-xs font-semibold" style={{ color: '#C8860A' }}>{t.hero.officialBadge}</p>
+              <p className="text-xs text-gold-400 font-semibold">{t.hero.officialBadge}</p>
             </motion.div>
           </div>
         </motion.div>
@@ -254,10 +244,9 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-5 h-8 rounded-full border flex items-start justify-center pt-1.5"
-          style={{ borderColor: 'rgba(200,134,10,0.4)' }}
+          className="w-5 h-8 rounded-full border border-gold-500/30 flex items-start justify-center pt-1.5"
         >
-          <div className="w-1 h-2 rounded-full" style={{ background: '#E8A020' }} />
+          <div className="w-1 h-2 rounded-full bg-gold-500/60" />
         </motion.div>
       </motion.div>
     </section>
