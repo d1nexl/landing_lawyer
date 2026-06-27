@@ -76,7 +76,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.1, duration: 0.6 }}
-                className="inline-flex items-center gap-2 text-[#f5c842] text-xs tracking-[0.35em] uppercase font-sans"
+                className="inline-flex items-center gap-2 text-[#f5c842] text-sm tracking-[0.25em] uppercase font-sans"
               >
                 <span className="w-8 h-px bg-[#f5c842]" />
                 {at.hero.eyebrow}
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.35, duration: 0.7 }}
-                className="font-display text-xl md:text-2xl text-white/70 font-light leading-relaxed italic max-w-xl"
+                className="font-display text-2xl md:text-3xl text-white/70 font-light leading-relaxed italic max-w-xl"
               >
                 {at.hero.title}
               </motion.p>
@@ -108,7 +108,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.45, duration: 0.7 }}
-                className="text-white/45 font-sans text-sm md:text-base leading-relaxed max-w-lg"
+                className="text-white/45 font-sans text-base md:text-lg leading-relaxed max-w-lg"
               >
                 {at.hero.subtitle}
               </motion.p>
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 ].map((s, i) => (
                   <div key={i}>
                     <div className="font-display text-3xl font-semibold" style={{ color: '#f5c842' }}>{s.val}</div>
-                    <div className="text-xs text-white/40 mt-1">{s.label}</div>
+                    <div className="text-sm text-white/40 mt-1">{s.label}</div>
                   </div>
                 ))}
               </motion.div>
@@ -142,7 +142,7 @@ export default function AboutPage() {
                   href="https://wa.me/380979217886"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold text-navy-900 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-base font-semibold text-navy-900 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
                   style={{ background: 'linear-gradient(135deg, #f5c842, #e8a020)' }}
                 >
                   <WhatsAppIcon />
@@ -150,7 +150,7 @@ export default function AboutPage() {
                 </a>
                 <a
                   href="viber://chat?number=%2B380979217886"
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold border-2 text-white transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-base font-semibold border-2 text-white transition-all duration-200 hover:scale-105"
                   style={{ borderColor: '#f5c842', color: '#f5c842' }}
                 >
                   <ViberIcon />
@@ -222,7 +222,7 @@ export default function AboutPage() {
                 animate={storyInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7 }}
               >
-                <p className="text-[#f5c842] text-xs tracking-[0.35em] uppercase font-sans mb-3">— {at.story.label} —</p>
+                <p className="text-[#f5c842] text-sm tracking-[0.25em] uppercase font-sans mb-3">— {at.story.label} —</p>
                 <h2 className="font-display text-4xl md:text-5xl font-semibold text-white mb-8">{at.story.title}</h2>
               </motion.div>
 
@@ -232,7 +232,7 @@ export default function AboutPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={storyInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.1 + i * 0.15 }}
-                  className="text-white/65 font-sans text-base leading-[1.85]"
+                  className="text-white/65 font-sans text-lg leading-[1.85]"
                 >
                   {p}
                 </motion.p>
@@ -246,14 +246,14 @@ export default function AboutPage() {
                 className="relative pl-6 py-1 border-l-2 mt-2"
                 style={{ borderColor: '#f5c842' }}
               >
-                <p className="font-display text-lg md:text-xl text-white/80 italic leading-relaxed">
+                <p className="font-display text-xl md:text-2xl text-white/80 italic leading-relaxed">
                   {lang === 'uk'
                     ? 'Для мене право — це не лише професія, а й відповідальність перед людьми.'
                     : lang === 'cs'
                     ? 'Pro mě právo není jen profesí, ale i odpovědností vůči lidem.'
                     : 'For me, law is not just a profession, but a responsibility to people.'}
                 </p>
-                <p className="text-[#f5c842] text-sm mt-3 font-semibold">— Аліна Татару</p>
+                <p className="text-[#f5c842] text-base mt-3 font-semibold">— Аліна Татару</p>
               </motion.blockquote>
             </div>
 
@@ -290,7 +290,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="text-center mb-14"
           >
-            <p className="text-[#f5c842] text-xs tracking-[0.35em] uppercase font-sans mb-3">— {at.professions.label} —</p>
+            <p className="text-[#f5c842] text-sm tracking-[0.25em] uppercase font-sans mb-3">— {at.professions.label} —</p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold text-white">{at.professions.title}</h2>
           </motion.div>
 
@@ -316,7 +316,7 @@ export default function AboutPage() {
                     <Icon size={24} style={{ color: '#f5c842' }} />
                   </div>
                   <h3 className="font-display text-2xl font-semibold text-white mb-3">{data.title}</h3>
-                  <p className="text-white/55 font-sans text-sm leading-relaxed">{data.desc}</p>
+                  <p className="text-white/55 font-sans text-base leading-relaxed">{data.desc}</p>
                 </div>
 
                 {/* Accent line */}
@@ -339,9 +339,9 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="text-center mb-14"
           >
-            <p className="text-[#f5c842] text-xs tracking-[0.35em] uppercase font-sans mb-3">— {at.education.label} —</p>
+            <p className="text-[#f5c842] text-sm tracking-[0.25em] uppercase font-sans mb-3">— {at.education.label} —</p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold text-white mb-3">{at.education.title}</h2>
-            <p className="text-white/45 font-sans text-sm md:text-base max-w-lg mx-auto">{at.education.subtitle}</p>
+            <p className="text-white/45 font-sans text-base md:text-lg max-w-lg mx-auto">{at.education.subtitle}</p>
           </motion.div>
 
           {/* Timeline */}
@@ -363,10 +363,10 @@ export default function AboutPage() {
                 {/* Card */}
                 <div className={`ml-16 md:ml-0 ${i % 2 === 0 ? 'md:mr-[calc(50%+2rem)] md:ml-0' : 'md:ml-[calc(50%+2rem)]'} rounded-2xl p-6 border w-full md:w-auto`} style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(245,200,66,0.15)' }}>
                   <div className="inline-flex items-center gap-2 mb-3">
-                    <div className="px-3 py-1 rounded-full text-xs font-semibold text-navy-900" style={{ background: '#f5c842' }}>{item.year}</div>
+                    <div className="px-3 py-1 rounded-full text-sm font-semibold text-navy-900" style={{ background: '#f5c842' }}>{item.year}</div>
                   </div>
                   <h3 className="font-display text-xl font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-white/50 text-base leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -386,9 +386,9 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="text-center mb-14"
           >
-            <p className="text-[#f5c842] text-xs tracking-[0.35em] uppercase font-sans mb-3">— {at.geography.label} —</p>
+            <p className="text-[#f5c842] text-sm tracking-[0.25em] uppercase font-sans mb-3">— {at.geography.label} —</p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold text-white mb-3">{at.geography.title}</h2>
-            <p className="text-white/45 font-sans text-sm md:text-base max-w-lg mx-auto">{at.geography.subtitle}</p>
+            <p className="text-white/45 font-sans text-base md:text-lg max-w-lg mx-auto">{at.geography.subtitle}</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
@@ -427,8 +427,8 @@ export default function AboutPage() {
                     </div>
                   )}
                 </div>
-                <h3 className="font-display text-xl font-semibold text-white mb-2">{item.place}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-display text-2xl font-semibold text-white mb-2">{item.place}</h3>
+                <p className="text-white/50 text-base leading-relaxed">{item.desc}</p>
                 <div className="mt-4 h-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: 'linear-gradient(90deg, transparent, #f5c842, transparent)' }} />
               </motion.div>
             ))}
@@ -449,7 +449,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="text-center mb-14"
           >
-            <p className="text-[#f5c842] text-xs tracking-[0.35em] uppercase font-sans mb-3">— {at.values.label} —</p>
+            <p className="text-[#f5c842] text-sm tracking-[0.25em] uppercase font-sans mb-3">— {at.values.label} —</p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold text-white">{at.values.title}</h2>
           </motion.div>
 
@@ -469,8 +469,8 @@ export default function AboutPage() {
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 border transition-all duration-300 group-hover:scale-110" style={{ background: 'rgba(245,200,66,0.1)', borderColor: 'rgba(245,200,66,0.25)' }}>
                     <Icon size={20} style={{ color: '#f5c842' }} />
                   </div>
-                  <h3 className="font-sans text-sm font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-white/45 text-xs leading-relaxed">{item.desc}</p>
+                  <h3 className="font-sans text-base font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-white/45 text-sm leading-relaxed">{item.desc}</p>
                 </motion.div>
               )
             })}
@@ -496,13 +496,13 @@ export default function AboutPage() {
               <Scale size={28} style={{ color: '#f5c842' }} />
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-semibold text-white mb-4">{at.cta.title}</h2>
-            <p className="text-white/50 font-sans text-base mb-10">{at.cta.subtitle}</p>
+            <p className="text-white/50 font-sans text-lg mb-10">{at.cta.subtitle}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://wa.me/380979217886"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-semibold text-navy-900 transition-all duration-200 hover:scale-105 shadow-xl"
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold text-navy-900 transition-all duration-200 hover:scale-105 shadow-xl"
                 style={{ background: 'linear-gradient(135deg, #f5c842, #e8a020)' }}
               >
                 <WhatsAppIcon />
@@ -510,7 +510,7 @@ export default function AboutPage() {
               </a>
               <a
                 href="viber://chat?number=%2B380979217886"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-semibold border-2 transition-all duration-200 hover:scale-105"
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold border-2 transition-all duration-200 hover:scale-105"
                 style={{ borderColor: '#f5c842', color: '#f5c842' }}
               >
                 <ViberIcon />
@@ -518,7 +518,7 @@ export default function AboutPage() {
               </a>
               <Link
                 href="/"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-semibold border transition-all duration-200 hover:border-white/40 text-white/60 hover:text-white"
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold border transition-all duration-200 hover:border-white/40 text-white/60 hover:text-white"
                 style={{ borderColor: 'rgba(255,255,255,0.15)' }}
               >
                 ← {lang === 'uk' ? 'На головну' : lang === 'cs' ? 'Domů' : 'Home'}
