@@ -167,14 +167,14 @@ export default function AboutPage() {
               className="relative order-1 lg:order-2"
             >
               <div className="grid grid-cols-2 gap-3 max-w-md mx-auto lg:max-w-none">
-                {/* Main large photo */}
-                <div className="col-span-2 relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#f5c842]/20 shadow-2xl">
-                  <Image src="/alina-4.jpg" alt="Аліна Татару" fill className="object-cover" style={{ objectPosition: '50% 30%' }} priority />
+                {/* Main large photo — taller to show more */}
+                <div className="col-span-2 relative rounded-2xl overflow-hidden border border-[#f5c842]/20 shadow-2xl" style={{ height: '420px' }}>
+                  <Image src="/alina-4.jpg" alt="Аліна Татару" fill className="object-cover" style={{ objectPosition: '50% 15%' }} priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-semibold text-navy-900" style={{ background: '#f5c842' }}>
-                      <Scale size={11} />
-                      {lang === 'uk' ? 'Юрист' : lang === 'cs' ? 'Právník' : 'Lawyer'}
+                      <BookOpen size={11} />
+                      {lang === 'uk' ? 'Академія права' : lang === 'cs' ? 'Akademie práva' : 'Law Academy'}
                     </div>
                   </div>
                 </div>
@@ -184,8 +184,8 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 to-transparent" />
                   <div className="absolute bottom-3 left-3">
                     <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-semibold text-navy-900" style={{ background: '#f5c842' }}>
-                      <BookOpen size={10} />
-                      {lang === 'uk' ? 'Академія права' : lang === 'cs' ? 'Akademie práva' : 'Law Academy'}
+                      <Scale size={10} />
+                      {lang === 'uk' ? 'Юрист' : lang === 'cs' ? 'Právník' : 'Lawyer'}
                     </div>
                   </div>
                 </div>
