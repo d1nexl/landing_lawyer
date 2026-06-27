@@ -57,18 +57,20 @@ export default function Navbar() {
           'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
           scrolled
             ? 'bg-navy-900/95 backdrop-blur-xl border-b border-gold-500/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]'
-            : 'bg-transparent'
+            : isAbout
+              ? 'bg-transparent'
+              : 'bg-[rgba(255,251,240,0.7)] backdrop-blur-md border-b border-[rgba(232,160,32,0.15)]'
         )}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <button onClick={() => isAbout ? (window.location.href = '/') : scrollTo('hero')} className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-full border border-gold-500/60 flex items-center justify-center group-hover:border-gold-400 transition-colors group-hover:shadow-gold">
-              <Scale size={16} className="text-gold-500 group-hover:text-gold-400 transition-colors" />
+            <div className={clsx('w-9 h-9 rounded-full border flex items-center justify-center transition-colors', scrolled || isAbout ? 'border-gold-500/60' : 'border-[#E8A020]/70')}>
+              <Scale size={16} className={clsx('transition-colors', scrolled || isAbout ? 'text-gold-500' : 'text-[#C8860A]')} />
             </div>
             <div className="text-left">
-              <div className="font-display text-base font-semibold text-white leading-tight">{t.hero.name}</div>
-              <div className="text-[10px] text-gold-500/80 tracking-widest uppercase font-sans">{t.hero.tagline}</div>
+              <div className={clsx('font-display text-base font-semibold leading-tight', scrolled || isAbout ? 'text-white' : 'text-[#0A1220]')}>{t.hero.name}</div>
+              <div className={clsx('text-[10px] tracking-widest uppercase font-sans', scrolled || isAbout ? 'text-gold-500/80' : 'text-[#C8860A]/80')}>{t.hero.tagline}</div>
             </div>
           </button>
 
@@ -78,7 +80,7 @@ export default function Navbar() {
               <button
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
-                className="text-sm text-white/60 hover:text-gold-400 transition-colors duration-200 font-sans tracking-wide"
+                className={clsx('text-sm transition-colors duration-200 font-sans tracking-wide hover:text-[#E8A020]', scrolled || isAbout ? 'text-white/60' : 'text-[#1a2a40]/70')}
               >
                 {link.label}
               </button>
