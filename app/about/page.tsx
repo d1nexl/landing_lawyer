@@ -63,7 +63,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5c842]/40 to-transparent" />
 
-        <div ref={heroRef} className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div ref={heroRef} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left */}
             <motion.div
@@ -87,7 +87,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="font-display text-5xl md:text-6xl xl:text-7xl font-semibold leading-[1.05] text-white"
+                className="font-display text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-semibold leading-[1.05] text-white"
               >
                 {at.hero.name.split(' ')[0]}{' '}
                 <span style={{ background: 'linear-gradient(135deg, #f5c842 0%, #e8a020 50%, #f5c842 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.35, duration: 0.7 }}
-                className="font-display text-2xl md:text-3xl text-white/70 font-light leading-relaxed italic max-w-xl"
+                className="font-display text-xl sm:text-2xl md:text-3xl text-white/70 font-light leading-relaxed italic max-w-xl"
               >
                 {at.hero.title}
               </motion.p>
@@ -118,7 +118,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.55, duration: 0.7 }}
-                className="flex gap-8 py-4 border-y border-white/8"
+                className="grid grid-cols-3 gap-2 py-4 border-y border-white/8"
               >
                 {[
                   { val: '8', label: lang === 'uk' ? 'років навчання' : lang === 'cs' ? 'let studia' : 'years of study' },
@@ -136,13 +136,13 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.65, duration: 0.6 }}
-                className="flex gap-3"
+                className="flex flex-wrap gap-3"
               >
                 <a
                   href="https://wa.me/380979217886"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-base font-semibold text-navy-900 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
+                  className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold text-navy-900 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
                   style={{ background: 'linear-gradient(135deg, #f5c842, #e8a020)' }}
                 >
                   <WhatsAppIcon />
@@ -150,7 +150,7 @@ export default function AboutPage() {
                 </a>
                 <a
                   href="viber://chat?number=%2B380979217886"
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-base font-semibold border-2 text-white transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold border-2 text-white transition-all duration-200 hover:scale-105"
                   style={{ borderColor: '#f5c842', color: '#f5c842' }}
                 >
                   <ViberIcon />
@@ -166,9 +166,9 @@ export default function AboutPage() {
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
               className="relative order-1 lg:order-2"
             >
-              <div className="grid grid-cols-2 gap-3 max-w-md mx-auto lg:max-w-none">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 max-w-sm sm:max-w-md mx-auto lg:max-w-none">
                 {/* Main large photo — taller to show more */}
-                <div className="col-span-2 relative rounded-2xl overflow-hidden border border-[#f5c842]/20 shadow-2xl" style={{ height: '420px' }}>
+                <div className="col-span-2 relative rounded-2xl overflow-hidden border border-[#f5c842]/20 shadow-2xl" style={{ height: 'clamp(260px, 55vw, 420px)' }}>
                   <Image src="/alina-4.jpg" alt="Аліна Татару" fill className="object-cover" style={{ objectPosition: '50% 15%' }} priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent" />
                   <div className="absolute bottom-4 left-4">
@@ -213,7 +213,7 @@ export default function AboutPage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5c842]/20 to-transparent" />
         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-[#f5c842]/4 blur-[100px] pointer-events-none" />
 
-        <div ref={storyRef} className="relative z-10 max-w-7xl mx-auto px-6">
+        <div ref={storyRef} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             {/* Text 3/5 */}
             <div className="lg:col-span-3 flex flex-col gap-6">
@@ -282,7 +282,7 @@ export default function AboutPage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5c842]/20 to-transparent" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px] rounded-full bg-[#f5c842]/5 blur-[120px] pointer-events-none" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -332,7 +332,7 @@ export default function AboutPage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5c842]/20 to-transparent" />
         <div className="absolute right-0 top-0 bottom-0 w-96 bg-gradient-to-l from-[#f5c842]/4 to-transparent pointer-events-none" />
 
-        <div ref={eduRef} className="relative z-10 max-w-7xl mx-auto px-6">
+        <div ref={eduRef} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={eduInView ? { opacity: 1, y: 0 } : {}}
@@ -379,7 +379,7 @@ export default function AboutPage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5c842]/20 to-transparent" />
         <div className="absolute inset-0 grid-pattern opacity-15" />
 
-        <div ref={geoRef} className="relative z-10 max-w-7xl mx-auto px-6">
+        <div ref={geoRef} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={geoInView ? { opacity: 1, y: 0 } : {}}
@@ -442,7 +442,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-navy-900 via-[#0d1520] to-navy-900" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-[#f5c842]/4 blur-[120px] pointer-events-none" />
 
-        <div ref={valuesRef} className="relative z-10 max-w-7xl mx-auto px-6">
+        <div ref={valuesRef} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={valuesInView ? { opacity: 1, y: 0 } : {}}
@@ -485,7 +485,7 @@ export default function AboutPage() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5c842]/20 to-transparent" />
         <div className="absolute inset-0 grid-pattern opacity-20" />
 
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -495,8 +495,8 @@ export default function AboutPage() {
             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-8 border shadow-lg" style={{ background: 'rgba(245,200,66,0.15)', borderColor: 'rgba(245,200,66,0.4)' }}>
               <Scale size={28} style={{ color: '#f5c842' }} />
             </div>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold text-white mb-4">{at.cta.title}</h2>
-            <p className="text-white/50 font-sans text-lg mb-10">{at.cta.subtitle}</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4">{at.cta.title}</h2>
+            <p className="text-white/50 font-sans text-base sm:text-lg mb-8 sm:mb-10">{at.cta.subtitle}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://wa.me/380979217886"

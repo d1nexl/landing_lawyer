@@ -97,32 +97,32 @@ export default function Hero() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20 grid lg:grid-cols-2 gap-16 items-center w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
         {/* Left column */}
         <motion.div
           variants={stagger}
           initial="hidden"
           animate="show"
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-4 sm:gap-6"
         >
           {/* Tagline */}
-          <motion.p variants={fadeUp} className="font-display text-gold-500/80 text-xl italic font-light tracking-wide">
+          <motion.p variants={fadeUp} className="font-display text-gold-500/80 text-base sm:text-xl italic font-light tracking-wide">
             {t.hero.tagline}
           </motion.p>
 
           {/* Name */}
-          <motion.h1 variants={fadeUp} className="font-display text-6xl md:text-7xl xl:text-8xl font-semibold leading-none text-white">
+          <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-6xl md:text-7xl xl:text-8xl font-semibold leading-none text-white">
             {t.hero.name.split(' ')[0]}{' '}
             <span className="text-gold-gradient">{t.hero.name.split(' ')[1]}</span>
           </motion.h1>
 
           {/* Title */}
-          <motion.h2 variants={fadeUp} className="font-sans text-xl md:text-2xl text-white/80 font-light leading-relaxed max-w-lg">
+          <motion.h2 variants={fadeUp} className="font-sans text-base sm:text-xl md:text-2xl text-white/80 font-light leading-relaxed">
             {t.hero.title}
           </motion.h2>
 
           {/* Subtitle */}
-          <motion.p variants={fadeUp} className="font-sans text-base md:text-lg text-white/50 leading-relaxed max-w-md">
+          <motion.p variants={fadeUp} className="font-sans text-sm sm:text-base md:text-lg text-white/50 leading-relaxed">
             {t.hero.subtitle}
           </motion.p>
 
@@ -130,42 +130,42 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="section-divider" />
 
           {/* CTA buttons */}
-          <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
+          <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
             <a
               href="https://wa.me/380979217886"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold shadow-gold"
+              className="btn-gold inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-full text-sm font-semibold shadow-gold"
             >
               <WhatsAppIcon />
               {t.hero.whatsapp}
             </a>
             <a
               href="viber://chat?number=%2B380979217886"
-              className="btn-outline-gold inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold"
+              className="btn-outline-gold inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-full text-sm font-semibold"
             >
               <ViberIcon />
               {t.hero.viber}
             </a>
             <a
               href="tel:+420723720172"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold border border-white/15 text-white/70 hover:border-white/40 hover:text-white transition-all duration-200"
+              className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-full text-sm font-semibold border border-white/15 text-white/70 hover:border-white/40 hover:text-white transition-all duration-200"
             >
-              <Phone size={16} />
+              <Phone size={15} />
               {t.hero.call}
             </a>
           </motion.div>
 
           {/* Stats row */}
-          <motion.div variants={fadeUp} className="flex gap-8 pt-4">
+          <motion.div variants={fadeUp} className="grid grid-cols-3 gap-2 pt-2 border-t border-white/8">
             {[
               { val: '3+', label: t.hero.statYears },
               { val: '100+', label: t.hero.statClients },
               { val: '100%', label: t.hero.statOfficial },
             ].map((s, i) => (
-              <div key={i} className="flex flex-col">
-                <span className="font-display text-3xl font-semibold text-gold-400">{s.val}</span>
-                <span className="text-sm text-white/40 mt-0.5">{s.label}</span>
+              <div key={i} className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                <span className="font-display text-2xl sm:text-3xl font-semibold text-gold-400">{s.val}</span>
+                <span className="text-xs sm:text-sm text-white/40 mt-0.5 leading-tight">{s.label}</span>
               </div>
             ))}
           </motion.div>
@@ -179,21 +179,21 @@ export default function Hero() {
           className="relative flex justify-center lg:justify-end"
         >
           {/* Glow behind photo */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-80 h-80 rounded-full bg-gold-500/10 blur-3xl animate-glow-pulse" />
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-60 h-60 sm:w-80 sm:h-80 rounded-full bg-gold-500/10 blur-3xl" />
           </div>
 
-          {/* Photo frame */}
-          <div className="relative w-80 h-[440px] md:w-96 md:h-[520px]">
+          {/* Photo frame — responsive width */}
+          <div className="relative w-full max-w-[280px] sm:max-w-xs md:max-w-sm h-[380px] sm:h-[440px] md:h-[520px]">
             {/* Outer ring */}
-            <div className="absolute -inset-3 rounded-3xl border border-gold-500/20 animate-pulse" />
+            <div className="absolute -inset-2 sm:-inset-3 rounded-3xl border border-gold-500/20 animate-pulse" />
             {/* Corner accents */}
-            <div className="absolute -top-1 -left-1 w-8 h-8 border-t-2 border-l-2 border-gold-500 rounded-tl-xl" />
-            <div className="absolute -top-1 -right-1 w-8 h-8 border-t-2 border-r-2 border-gold-500 rounded-tr-xl" />
-            <div className="absolute -bottom-1 -left-1 w-8 h-8 border-b-2 border-l-2 border-gold-500 rounded-bl-xl" />
-            <div className="absolute -bottom-1 -right-1 w-8 h-8 border-b-2 border-r-2 border-gold-500 rounded-br-xl" />
+            <div className="absolute -top-1 -left-1 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-gold-500 rounded-tl-xl" />
+            <div className="absolute -top-1 -right-1 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-gold-500 rounded-tr-xl" />
+            <div className="absolute -bottom-1 -left-1 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-gold-500 rounded-bl-xl" />
+            <div className="absolute -bottom-1 -right-1 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-gold-500 rounded-br-xl" />
 
-            {/* Photo container — замініть /alina-1.jpg на реальне фото */}
+            {/* Photo */}
             <div className="relative w-full h-full rounded-2xl overflow-hidden glow-gold">
               <Image
                 src="/alina-1.jpg"
@@ -202,33 +202,30 @@ export default function Hero() {
                 className="object-cover object-top"
                 priority
               />
-              {/* Bottom gradient */}
               <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-navy-900/80 to-transparent" />
             </div>
 
-            {/* Floating badge */}
+            {/* Floating badge — зміщено всередину щоб не виходило за екран */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-6 -left-6 glass-card rounded-2xl px-5 py-4 border border-gold-500/20 shadow-card"
+              className="absolute bottom-4 left-3 glass-card rounded-xl px-3 py-2.5 sm:px-5 sm:py-4 border border-gold-500/20 shadow-card"
             >
-              <div className="flex items-center gap-2">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={12} className="star-filled fill-gold-500" />
-                  ))}
-                </div>
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={11} className="star-filled fill-gold-500" />
+                ))}
               </div>
-              <p className="text-xs text-white/60 mt-1">{t.hero.clientsBadge}</p>
+              <p className="text-xs text-white/60 mt-1 whitespace-nowrap">{t.hero.clientsBadge}</p>
             </motion.div>
 
-            {/* Floating tag */}
+            {/* Floating tag — всередину щоб не обрізалось */}
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -top-4 -right-4 glass-card rounded-xl px-4 py-3 border border-gold-500/20"
+              className="absolute top-4 right-3 glass-card rounded-xl px-3 py-2 sm:px-4 sm:py-3 border border-gold-500/20"
             >
-              <p className="text-xs text-gold-400 font-semibold">{t.hero.officialBadge}</p>
+              <p className="text-xs text-gold-400 font-semibold whitespace-nowrap">{t.hero.officialBadge}</p>
             </motion.div>
           </div>
         </motion.div>

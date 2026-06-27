@@ -60,15 +60,15 @@ export default function Navbar() {
             : 'bg-transparent'
         )}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2">
           {/* Logo */}
-          <button onClick={() => isAbout ? (window.location.href = '/') : scrollTo('hero')} className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-full border border-gold-500/60 flex items-center justify-center group-hover:border-gold-400 transition-colors group-hover:shadow-gold">
-              <Scale size={16} className="text-gold-500 group-hover:text-gold-400 transition-colors" />
+          <button onClick={() => isAbout ? (window.location.href = '/') : scrollTo('hero')} className="flex items-center gap-2 sm:gap-3 group min-w-0">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-gold-500/60 flex items-center justify-center flex-shrink-0 group-hover:border-gold-400 transition-colors group-hover:shadow-gold">
+              <Scale size={14} className="text-gold-500 group-hover:text-gold-400 transition-colors" />
             </div>
-            <div className="text-left">
-              <div className="font-display text-base font-semibold text-white leading-tight">{t.hero.name}</div>
-              <div className="text-[10px] text-gold-500/80 tracking-widest uppercase font-sans">{t.hero.tagline}</div>
+            <div className="text-left min-w-0">
+              <div className="font-display text-sm sm:text-base font-semibold text-white leading-tight truncate">{t.hero.name}</div>
+              <div className="text-[9px] sm:text-[10px] text-gold-500/80 tracking-widest uppercase font-sans hidden xs:block">{t.hero.tagline}</div>
             </div>
           </button>
 

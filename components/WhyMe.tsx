@@ -18,7 +18,7 @@ export default function WhyMe() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-blue-900/10 blur-3xl pointer-events-none" />
 
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
+      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Photo column */}
           <motion.div

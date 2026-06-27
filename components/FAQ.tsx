@@ -16,7 +16,7 @@ export default function FAQ() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
-      <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6">
+      <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

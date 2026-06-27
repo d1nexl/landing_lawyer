@@ -15,7 +15,7 @@ export default function HowItWorks() {
       <div className="absolute inset-0 grid-pattern opacity-30" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold-500/3 blur-3xl pointer-events-none" />
 
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
+      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

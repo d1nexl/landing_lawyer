@@ -73,7 +73,7 @@ export default function Contact() {
       <div className="absolute inset-0 grid-pattern opacity-20" />
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 rounded-full bg-gold-500/4 blur-3xl pointer-events-none" />
 
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
+      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -120,7 +120,7 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                  className="group glass-card hover-gold rounded-xl p-4 flex items-center gap-4 cursor-pointer"
+                  className="group glass-card hover-gold rounded-xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 cursor-pointer"
                 >
                   <div className="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500/20 transition-all duration-300">
                     {c.icon}
@@ -146,7 +146,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-white/40 text-sm">Email</p>
-                <p className="text-white text-base font-medium mt-0.5">uristkonsultant26@gmail.com</p>
+                <p className="text-white text-sm sm:text-base font-medium mt-0.5 break-all">uristkonsultant26@gmail.com</p>
               </div>
             </motion.a>
           </motion.div>

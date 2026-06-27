@@ -22,7 +22,7 @@ export default function Services() {
       <div className="absolute inset-0 grid-pattern opacity-50" />
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gold-500/3 blur-3xl pointer-events-none" />
 
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
+      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

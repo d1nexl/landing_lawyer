@@ -15,7 +15,7 @@ export default function Testimonials() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/15 to-transparent" />
       <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-gold-500/4 blur-3xl pointer-events-none" />
 
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
+      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
