@@ -27,6 +27,12 @@ export default function Footer() {
 
         {/* Links — wrap gracefully on mobile */}
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+          <a href="https://www.facebook.com/UristAlinaTataru26" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-gold-400 text-sm transition-colors whitespace-nowrap">
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/alinatataruiurist" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-gold-400 text-sm transition-colors whitespace-nowrap">
+            Instagram
+          </a>
           <a href="https://wa.me/380979217886" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-gold-400 text-sm transition-colors whitespace-nowrap">
             WhatsApp
           </a>
@@ -38,9 +44,6 @@ export default function Footer() {
           </a>
           <a href="mailto:uristkonsultant26@gmail.com" className="text-white/30 hover:text-gold-400 text-xs sm:text-sm transition-colors whitespace-nowrap">
             uristkonsultant26@gmail.com
-          </a>
-          <a href="https://www.instagram.com/alinatataruiurist" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-gold-400 text-sm transition-colors whitespace-nowrap">
-            Instagram
           </a>
         </div>
       </div>
