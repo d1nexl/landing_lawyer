@@ -9,7 +9,7 @@ export const translations = {
       contact: 'Контакти',
     },
     hero: {
-      tagline: 'Юрист за кордоном',
+      tagline: 'Юрист без кордонів',
       name: 'Аліна Татару',
       title: 'Юридична допомога та оформлення документів у Чехії',
       subtitle: 'Допомагаю з візами, робочими картами, паспортами, працевлаштуванням та іншими питаннями документів у Празі.',
@@ -127,7 +127,7 @@ export const translations = {
     },
     footer: {
       rights: 'Всі права захищені',
-      tagline: 'Юрист за кордоном',
+      tagline: 'Юрист без кордонів',
     },
   },
 
@@ -141,7 +141,7 @@ export const translations = {
       contact: 'Kontakt',
     },
     hero: {
-      tagline: 'Právník v zahraničí',
+      tagline: 'Právník bez hranic',
       name: 'Alina Tataru',
       title: 'Právní pomoc a vyřízení dokumentů v České republice',
       subtitle: 'Pomáhám s vízy, pracovními kartami, pasy, zaměstnáváním a dalšími dokumenty v Praze.',
@@ -241,7 +241,7 @@ export const translations = {
     },
     footer: {
       rights: 'Všechna práva vyhrazena',
-      tagline: 'Právník v zahraničí',
+      tagline: 'Právník bez hranic',
     },
   },
 
@@ -255,7 +255,7 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      tagline: 'Lawyer Abroad',
+      tagline: 'Lawyer Without Borders',
       name: 'Alina Tataru',
       title: 'Legal Assistance & Document Services in Czech Republic',
       subtitle: 'Helping with visas, work permits, passports, employment and other document matters in Prague.',
@@ -355,7 +355,7 @@ export const translations = {
     },
     footer: {
       rights: 'All rights reserved',
-      tagline: 'Lawyer Abroad',
+      tagline: 'Lawyer Without Borders',
     },
   },
 }

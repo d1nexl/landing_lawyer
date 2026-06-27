@@ -117,7 +117,7 @@ export default function Contact() {
               {/* Overlay text */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <p className="font-display text-2xl text-white font-semibold">Аліна Татару</p>
-                <p className="text-gold-400 text-sm mt-1">Юрист за кордоном</p>
+                <p className="text-gold-400 text-sm mt-1">Юрист без кордонів</p>
               </div>
             </div>
 
