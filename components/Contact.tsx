@@ -122,7 +122,7 @@ export default function Contact() {
             </div>
 
             {/* Contact cards */}
-            <div className="grid sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-3">
               {contacts.map((c, i) => (
                 <motion.a
                   key={i}
@@ -132,14 +132,14 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                  className="group glass-card hover-gold rounded-xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 cursor-pointer"
+                  className="group glass-card hover-gold rounded-xl p-3 flex items-center gap-3 cursor-pointer overflow-hidden"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500/20 transition-all duration-300">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500/20 transition-all duration-300">
                     {c.icon}
                   </div>
-                  <div className="min-w-0">
-                    <p className="text-white/40 text-sm">{c.label}</p>
-                    <p className="text-white text-base font-medium mt-0.5 truncate">{c.value}</p>
+                  <div className="min-w-0 overflow-hidden">
+                    <p className="text-white/40 text-xs sm:text-sm">{c.label}</p>
+                    <p className="text-white text-sm sm:text-base font-medium mt-0.5 truncate">{c.value}</p>
                   </div>
                 </motion.a>
               ))}
