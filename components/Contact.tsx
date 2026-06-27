@@ -21,7 +21,7 @@ const ViberIcon = () => (
 export default function Contact() {
   const { t } = useLang()
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const inView = useInView(ref, { once: true, margin: '100px' })
   const [form, setForm] = useState({ name: '', phone: '', message: '' })
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)

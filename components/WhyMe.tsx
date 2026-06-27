@@ -11,7 +11,7 @@ const icons = [UserCheck, Shield, Zap, Award, HeartHandshake, Gem]
 export default function WhyMe() {
   const { t } = useLang()
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const inView = useInView(ref, { once: true, margin: '100px' })
 
   return (
     <section id="why-me" className="relative py-28 bg-navy-900 overflow-hidden">

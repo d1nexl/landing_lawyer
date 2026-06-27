@@ -7,7 +7,7 @@ import { useLang } from '@/contexts/LanguageContext'
 export default function HowItWorks() {
   const { t } = useLang()
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const inView = useInView(ref, { once: true, margin: '100px' })
 
   return (
     <section id="how-it-works" className="relative py-28 bg-navy-950 overflow-hidden">

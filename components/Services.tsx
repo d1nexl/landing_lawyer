@@ -13,7 +13,7 @@ const icons = [FileText, CreditCard, Globe, Briefcase, Users, Home, Scale, Build
 export default function Services() {
   const { t } = useLang()
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const inView = useInView(ref, { once: true, margin: '100px' })
 
   return (
     <section id="services" className="relative py-28 bg-navy-950 overflow-hidden">

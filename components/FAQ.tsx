@@ -8,7 +8,7 @@ import { useLang } from '@/contexts/LanguageContext'
 export default function FAQ() {
   const { t } = useLang()
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const inView = useInView(ref, { once: true, margin: '100px' })
   const [open, setOpen] = useState<number | null>(0)
 
   return (
