@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Phone, Send, CheckCircle2, Facebook } from 'lucide-react'
+import { Phone, Send, CheckCircle2, Facebook, Mail } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
 import Image from 'next/image'
 
@@ -132,6 +132,23 @@ export default function Contact() {
                 </motion.a>
               ))}
             </div>
+
+            {/* Email — full width */}
+            <motion.a
+              href="mailto:uristkonsultant26@gmail.com"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.65 }}
+              className="group glass-card hover-gold rounded-xl p-4 flex items-center gap-4 cursor-pointer w-full"
+            >
+              <div className="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500/20 transition-all duration-300">
+                <Mail size={20} className="text-gold-500" />
+              </div>
+              <div>
+                <p className="text-white/40 text-sm">Email</p>
+                <p className="text-white text-base font-medium mt-0.5">uristkonsultant26@gmail.com</p>
+              </div>
+            </motion.a>
           </motion.div>
 
           {/* Right — form */}
