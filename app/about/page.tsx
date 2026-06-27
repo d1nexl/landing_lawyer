@@ -168,8 +168,8 @@ export default function AboutPage() {
             >
               <div className="grid grid-cols-2 gap-3 max-w-md mx-auto lg:max-w-none">
                 {/* Main large photo */}
-                <div className="col-span-2 relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#f5c842]/20 shadow-2xl">
-                  <Image src="/alina-4.jpg" alt="Аліна Татару" fill className="object-cover object-top" priority />
+                <div className="col-span-2 relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#f5c842]/20 shadow-2xl">
+                  <Image src="/alina-4.jpg" alt="Аліна Татару" fill className="object-cover" style={{ objectPosition: '50% 30%' }} priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-semibold text-navy-900" style={{ background: '#f5c842' }}>
@@ -202,31 +202,6 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Floating badge */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -bottom-4 -left-4 glass-card rounded-2xl px-5 py-4 border shadow-2xl z-10"
-                style={{ borderColor: 'rgba(245,200,66,0.3)' }}
-              >
-                <div className="flex items-center gap-1.5 mb-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={11} className="fill-[#f5c842] text-[#f5c842]" />
-                  ))}
-                </div>
-                <p className="text-xs text-white/60">
-                  {lang === 'uk' ? '100+ задоволених клієнтів' : lang === 'cs' ? '100+ spokojených klientů' : '100+ happy clients'}
-                </p>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                className="absolute -top-3 -right-3 glass-card rounded-xl px-4 py-2.5 border z-10"
-                style={{ borderColor: 'rgba(245,200,66,0.3)' }}
-              >
-                <p className="text-xs font-semibold" style={{ color: '#f5c842' }}>🇨🇿 Прага · 🌍 Online</p>
-              </motion.div>
             </motion.div>
           </div>
         </div>
