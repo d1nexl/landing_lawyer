@@ -1,6 +1,6 @@
 'use client'
 
-import { Scale, Mail } from 'lucide-react'
+import { Scale } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
 
 export default function Footer() {
@@ -31,8 +31,7 @@ export default function Footer() {
           <a href="tel:+420723720172" className="text-white/30 hover:text-gold-400 text-sm transition-colors">
             +420 723 720 172
           </a>
-          <a href="mailto:uristkonsultant26@gmail.com" className="inline-flex items-center gap-1.5 text-white/30 hover:text-gold-400 text-sm transition-colors">
-            <Mail size={13} />
+          <a href="mailto:uristkonsultant26@gmail.com" className="text-white/30 hover:text-gold-400 text-sm transition-colors">
             uristkonsultant26@gmail.com
           </a>
         </div>
