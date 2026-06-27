@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Scale, GraduationCap, Globe, Heart, Star, Award, Users, MessageCircle, Briefcase, BookOpen } from 'lucide-react'
+import { Scale, GraduationCap, Globe, Heart, Star, Award, Users, MessageCircle, BookOpen } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLang } from '@/contexts/LanguageContext'
@@ -169,7 +169,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-3 max-w-md mx-auto lg:max-w-none">
                 {/* Main large photo */}
                 <div className="col-span-2 relative aspect-[16/9] rounded-2xl overflow-hidden border border-[#f5c842]/20 shadow-2xl">
-                  <Image src="/alina-1.jpg" alt="Аліна Татару" fill className="object-cover object-top" priority />
+                  <Image src="/alina-4.jpg" alt="Аліна Татару" fill className="object-cover object-top" priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-semibold text-navy-900" style={{ background: '#f5c842' }}>
@@ -426,7 +426,32 @@ export default function AboutPage() {
                 className="group rounded-2xl p-7 border text-center transition-all duration-300 hover:scale-105 cursor-default"
                 style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(245,200,66,0.15)' }}
               >
-                <div className="text-4xl mb-4">{item.flag}</div>
+                <div className="flex justify-center mb-5">
+                  {i === 0 && (
+                    /* Czech flag SVG */
+                    <svg width="56" height="40" viewBox="0 0 56 40" className="rounded-md shadow-lg" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="56" height="40" fill="#D7141A" rx="4"/>
+                      <rect width="56" height="20" fill="#FFFFFF" rx="4"/>
+                      <rect width="56" height="20" fill="#FFFFFF"/>
+                      <polygon points="0,0 26,20 0,40" fill="#11457E"/>
+                    </svg>
+                  )}
+                  {i === 1 && (
+                    /* Ukrainian flag SVG */
+                    <svg width="56" height="40" viewBox="0 0 56 40" className="rounded-md shadow-lg" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="56" height="40" fill="#FFD700" rx="4"/>
+                      <rect width="56" height="20" fill="#005BBB"/>
+                      <rect y="0" width="56" height="20" fill="#005BBB" rx="4"/>
+                      <rect y="20" width="56" height="20" fill="#FFD700"/>
+                    </svg>
+                  )}
+                  {i === 2 && (
+                    /* Globe icon */
+                    <div className="w-14 h-14 rounded-full flex items-center justify-center border-2" style={{ background: 'linear-gradient(135deg, #1a3a6b 0%, #0a1f4d 50%, #1a5a3a 100%)', borderColor: 'rgba(245,200,66,0.4)' }}>
+                      <Globe size={28} style={{ color: '#f5c842' }} />
+                    </div>
+                  )}
+                </div>
                 <h3 className="font-display text-xl font-semibold text-white mb-2">{item.place}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
                 <div className="mt-4 h-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: 'linear-gradient(90deg, transparent, #f5c842, transparent)' }} />
