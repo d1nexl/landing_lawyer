@@ -17,8 +17,14 @@ export const translations = {
       viber: 'Viber',
       call: 'Зателефонувати',
       badge: 'м. Прага, Чехія',
+      officialBadge: '✓ Офіційний юрист',
+      clientsBadge: '100+ задоволених клієнтів',
+      statYears: 'Років досвіду',
+      statClients: 'Задоволених клієнтів',
+      statOfficial: 'Офіційно та законно',
     },
     services: {
+      label: 'Послуги',
       title: 'Мої послуги',
       subtitle: 'Комплексна юридична допомога в Чехії — від документів до працевлаштування',
       items: [
@@ -33,8 +39,11 @@ export const translations = {
       ],
     },
     whyMe: {
+      label: 'Переваги',
       title: 'Чому обирають мене',
       subtitle: 'Знаю, наскільки важливо отримати правильне рішення без зайвих нервів і втрати часу',
+      experienceLabel: 'Досвід',
+      experienceYears: 'Років у Чехії',
       items: [
         { title: 'Індивідуальний підхід', desc: 'Кожна ситуація унікальна. Я знаходжу рішення саме для вас.' },
         { title: 'Офіційне оформлення', desc: 'Все законно, чесно та прозоро. Жодних схем.' },
@@ -45,8 +54,10 @@ export const translations = {
       ],
     },
     howItWorks: {
+      label: 'Процес',
       title: 'Як проходить співпраця',
       subtitle: 'Простий та зрозумілий процес від першого контакту до результату',
+      cta: 'Розпочати зараз →',
       steps: [
         { num: '01', title: "Зв'язуєтесь зі мною", desc: 'Пишете або телефонуєте будь-яким зручним способом — WhatsApp, Viber або телефон.' },
         { num: '02', title: 'Описуєте ситуацію', desc: 'Розповідаєте про вашу ситуацію, потреби та очікування.' },
@@ -56,6 +67,7 @@ export const translations = {
       ],
     },
     testimonials: {
+      label: 'Відгуки',
       title: 'Відгуки клієнтів',
       subtitle: 'Що кажуть люди, яким я вже допомогла',
       items: [
@@ -65,6 +77,7 @@ export const translations = {
       ],
     },
     faq: {
+      label: 'FAQ',
       title: 'Поширені запитання',
       subtitle: 'Відповіді на найпопулярніші питання',
       items: [
@@ -95,6 +108,7 @@ export const translations = {
       ],
     },
     contact: {
+      label: 'Контакти',
       title: "Зв'яжіться зі мною",
       subtitle: 'Буду рада допомогти вирішити ваше питання',
       phone: 'Телефон (CZ)',
@@ -108,6 +122,12 @@ export const translations = {
       send: 'Відправити запит',
       sending: 'Відправляємо...',
       success: 'Дякую! Я зв\'яжусь з вами найближчим часом.',
+      formNote: 'Натискаючи кнопку, ви відкриєте чат у WhatsApp з готовим повідомленням',
+      sendAnother: 'Відправити ще',
+    },
+    footer: {
+      rights: 'Всі права захищені',
+      tagline: 'Юрист за кордоном',
     },
   },
 
@@ -129,8 +149,14 @@ export const translations = {
       viber: 'Viber',
       call: 'Zavolat',
       badge: 'Praha, Česká republika',
+      officialBadge: '✓ Oficiální právník',
+      clientsBadge: '100+ spokojených klientů',
+      statYears: 'Let zkušeností',
+      statClients: 'Spokojených klientů',
+      statOfficial: 'Oficiálně a legálně',
     },
     services: {
+      label: 'Služby',
       title: 'Moje služby',
       subtitle: 'Komplexní právní pomoc v České republice — od dokumentů po zaměstnání',
       items: [
@@ -145,8 +171,11 @@ export const translations = {
       ],
     },
     whyMe: {
+      label: 'Výhody',
       title: 'Proč si vybrat mě',
       subtitle: 'Vím, jak důležité je získat správné řešení bez zbytečného stresu a ztráty času',
+      experienceLabel: 'Zkušenosti',
+      experienceYears: 'Let v ČR',
       items: [
         { title: 'Individuální přístup', desc: 'Každá situace je jedinečná. Nacházím řešení právě pro vás.' },
         { title: 'Oficiální vyřízení', desc: 'Vše legálně, čestně a transparentně. Žádná schémata.' },
@@ -157,8 +186,10 @@ export const translations = {
       ],
     },
     howItWorks: {
+      label: 'Proces',
       title: 'Jak spolupráce probíhá',
       subtitle: 'Jednoduchý a srozumitelný proces od prvního kontaktu po výsledek',
+      cta: 'Začít nyní →',
       steps: [
         { num: '01', title: 'Kontaktujete mě', desc: 'Napíšete nebo zavoláte jakýmkoli způsobem — WhatsApp, Viber nebo telefon.' },
         { num: '02', title: 'Popíšete situaci', desc: 'Vysvětlíte svou situaci, potřeby a očekávání.' },
@@ -168,6 +199,7 @@ export const translations = {
       ],
     },
     testimonials: {
+      label: 'Recenze',
       title: 'Reference klientů',
       subtitle: 'Co říkají lidé, kterým jsem již pomohla',
       items: [
@@ -177,6 +209,7 @@ export const translations = {
       ],
     },
     faq: {
+      label: 'FAQ',
       title: 'Časté dotazy',
       subtitle: 'Odpovědi na nejčastější otázky',
       items: [
@@ -202,6 +235,13 @@ export const translations = {
       send: 'Odeslat žádost',
       sending: 'Odesíláme...',
       success: 'Děkuji! Ozvu se vám co nejdříve.',
+      formNote: 'Kliknutím na tlačítko otevřete chat WhatsApp s připravenou zprávou',
+      sendAnother: 'Odeslat znovu',
+      label: 'Kontakt',
+    },
+    footer: {
+      rights: 'Všechna práva vyhrazena',
+      tagline: 'Právník v zahraničí',
     },
   },
 
@@ -223,8 +263,14 @@ export const translations = {
       viber: 'Viber',
       call: 'Call Now',
       badge: 'Prague, Czech Republic',
+      officialBadge: '✓ Official Lawyer',
+      clientsBadge: '100+ Happy Clients',
+      statYears: 'Years of Experience',
+      statClients: 'Happy Clients',
+      statOfficial: 'Officially & Legally',
     },
     services: {
+      label: 'Services',
       title: 'My Services',
       subtitle: 'Comprehensive legal assistance in Czech Republic — from documents to employment',
       items: [
@@ -239,8 +285,11 @@ export const translations = {
       ],
     },
     whyMe: {
+      label: 'Benefits',
       title: 'Why Choose Me',
       subtitle: 'I know how important it is to get the right solution without unnecessary stress and time loss',
+      experienceLabel: 'Experience',
+      experienceYears: 'Years in CZ',
       items: [
         { title: 'Individual Approach', desc: 'Every situation is unique. I find solutions specifically for you.' },
         { title: 'Official Processing', desc: 'Everything legally, honestly and transparently. No schemes.' },
@@ -251,8 +300,10 @@ export const translations = {
       ],
     },
     howItWorks: {
+      label: 'Process',
       title: 'How Cooperation Works',
       subtitle: 'A simple and clear process from first contact to result',
+      cta: 'Start Now →',
       steps: [
         { num: '01', title: 'Contact Me', desc: 'Write or call in any convenient way — WhatsApp, Viber or phone.' },
         { num: '02', title: 'Describe Your Situation', desc: 'Tell me about your situation, needs and expectations.' },
@@ -262,6 +313,7 @@ export const translations = {
       ],
     },
     testimonials: {
+      label: 'Reviews',
       title: 'Client Reviews',
       subtitle: 'What people say about the help they received',
       items: [
@@ -271,6 +323,7 @@ export const translations = {
       ],
     },
     faq: {
+      label: 'FAQ',
       title: 'Frequently Asked Questions',
       subtitle: 'Answers to the most common questions',
       items: [
@@ -296,6 +349,13 @@ export const translations = {
       send: 'Send Request',
       sending: 'Sending...',
       success: 'Thank you! I will contact you as soon as possible.',
+      formNote: 'By clicking the button, you will open a WhatsApp chat with a ready message',
+      sendAnother: 'Send Another',
+      label: 'Contact',
+    },
+    footer: {
+      rights: 'All rights reserved',
+      tagline: 'Lawyer Abroad',
     },
   },
 }

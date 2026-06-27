@@ -159,9 +159,9 @@ export default function Hero() {
           {/* Stats row */}
           <motion.div variants={fadeUp} className="flex gap-8 pt-4">
             {[
-              { val: '3+', label: lang === 'uk' ? 'Років досвіду' : lang === 'cs' ? 'Let zkušeností' : 'Years of Experience' },
-              { val: '100+', label: lang === 'uk' ? 'Задоволених клієнтів' : lang === 'cs' ? 'Spokojených klientů' : 'Happy Clients' },
-              { val: '100%', label: lang === 'uk' ? 'Офіційно та законно' : lang === 'cs' ? 'Officiálně a legálně' : 'Officially & Legally' },
+              { val: '3+', label: t.hero.statYears },
+              { val: '100+', label: t.hero.statClients },
+              { val: '100%', label: t.hero.statOfficial },
             ].map((s, i) => (
               <div key={i} className="flex flex-col">
                 <span className="font-display text-2xl font-semibold text-gold-400">{s.val}</span>
@@ -219,7 +219,7 @@ export default function Hero() {
                   ))}
                 </div>
               </div>
-              <p className="text-xs text-white/60 mt-1">100+ задоволених клієнтів</p>
+              <p className="text-xs text-white/60 mt-1">{t.hero.clientsBadge}</p>
             </motion.div>
 
             {/* Floating tag */}
@@ -228,7 +228,7 @@ export default function Hero() {
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               className="absolute -top-4 -right-4 glass-card rounded-xl px-4 py-3 border border-gold-500/20"
             >
-              <p className="text-xs text-gold-400 font-semibold">✓ Офіційний юрист</p>
+              <p className="text-xs text-gold-400 font-semibold">{t.hero.officialBadge}</p>
             </motion.div>
           </div>
         </motion.div>

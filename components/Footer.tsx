@@ -1,8 +1,11 @@
 'use client'
 
 import { Scale } from 'lucide-react'
+import { useLang } from '@/contexts/LanguageContext'
 
 export default function Footer() {
+  const { t } = useLang()
+
   return (
     <footer className="bg-navy-950 border-t border-gold-500/10 py-10">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -11,12 +14,12 @@ export default function Footer() {
             <Scale size={14} className="text-gold-500" />
           </div>
           <div>
-            <p className="font-display text-sm font-semibold text-white">Аліна Татур</p>
-            <p className="text-[10px] text-gold-500/60 tracking-widest uppercase">Юрист за кордоном</p>
+            <p className="font-display text-sm font-semibold text-white">{t.hero.name}</p>
+            <p className="text-[10px] text-gold-500/60 tracking-widest uppercase">{t.footer.tagline}</p>
           </div>
         </div>
         <p className="text-white/25 text-xs text-center">
-          © {new Date().getFullYear()} Аліна Татур. Всі права захищені.
+          © {new Date().getFullYear()} {t.hero.name}. {t.footer.rights}.
         </p>
         <div className="flex gap-4">
           <a href="https://wa.me/380979217886" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-gold-400 text-xs transition-colors">

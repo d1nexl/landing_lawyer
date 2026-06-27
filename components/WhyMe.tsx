@@ -44,9 +44,9 @@ export default function WhyMe() {
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                 className="absolute -right-8 top-1/4 glass-card rounded-2xl p-4 border border-gold-500/20 shadow-card w-44"
               >
-                <p className="text-gold-400 text-xs font-semibold uppercase tracking-wide mb-1">Досвід</p>
+                <p className="text-gold-400 text-xs font-semibold uppercase tracking-wide mb-1">{t.whyMe.experienceLabel}</p>
                 <p className="font-display text-3xl text-white font-semibold">3+</p>
-                <p className="text-white/40 text-xs mt-1">Років у Чехії</p>
+                <p className="text-white/40 text-xs mt-1">{t.whyMe.experienceYears}</p>
               </motion.div>
             </div>
           </motion.div>
@@ -60,7 +60,7 @@ export default function WhyMe() {
               className="mb-12"
             >
               <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">
-                — Переваги —
+                — {t.whyMe.label} —
               </p>
               <h2 className="font-display text-4xl md:text-5xl font-semibold text-white mb-4">
                 {t.whyMe.title}

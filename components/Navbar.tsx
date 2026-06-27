@@ -58,8 +58,8 @@ export default function Navbar() {
               <Scale size={16} className="text-gold-500 group-hover:text-gold-400 transition-colors" />
             </div>
             <div className="text-left">
-              <div className="font-display text-base font-semibold text-white leading-tight">Аліна Татур</div>
-              <div className="text-[10px] text-gold-500/80 tracking-widest uppercase font-sans">Юрист за кордоном</div>
+              <div className="font-display text-base font-semibold text-white leading-tight">{t.hero.name}</div>
+              <div className="text-[10px] text-gold-500/80 tracking-widest uppercase font-sans">{t.hero.tagline}</div>
             </div>
           </button>
 

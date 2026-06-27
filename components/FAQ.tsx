@@ -24,7 +24,7 @@ export default function FAQ() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">— FAQ —</p>
+          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">— {t.faq.label} —</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
             {t.faq.title}
           </h2>

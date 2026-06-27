@@ -23,7 +23,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.7 }}
           className="text-center mb-20"
         >
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">— Процес —</p>
+          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">— {t.howItWorks.label} —</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
             {t.howItWorks.title}
           </h2>
@@ -86,7 +86,7 @@ export default function HowItWorks() {
             rel="noopener noreferrer"
             className="btn-gold inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-semibold shadow-gold"
           >
-            Розпочати зараз →
+            {t.howItWorks.cta}
           </a>
         </motion.div>
       </div>

@@ -81,7 +81,7 @@ export default function Contact() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">— Контакти —</p>
+          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">— {t.contact.label} —</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
             {t.contact.title}
           </h2>
@@ -157,7 +157,7 @@ export default function Contact() {
                     onClick={() => { setSent(false); setForm({ name: '', phone: '', message: '' }) }}
                     className="text-gold-400 text-sm underline underline-offset-4 mt-2"
                   >
-                    Відправити ще
+                    {t.contact.sendAnother}
                   </button>
                 </motion.div>
               ) : (
@@ -210,7 +210,7 @@ export default function Contact() {
                     )}
                   </button>
                   <p className="text-white/25 text-xs text-center">
-                    Натискаючи кнопку, ви відкриєте чат у WhatsApp з готовим повідомленням
+                    {t.contact.formNote}
                   </p>
                 </form>
               )}

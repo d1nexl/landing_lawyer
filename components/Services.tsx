@@ -31,7 +31,7 @@ export default function Services() {
           className="text-center mb-16"
         >
           <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">
-            — Послуги —
+            — {t.services.label} —
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
             {t.services.title}
