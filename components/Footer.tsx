@@ -39,6 +39,9 @@ export default function Footer() {
           <a href="mailto:uristkonsultant26@gmail.com" className="text-white/30 hover:text-gold-400 text-xs sm:text-sm transition-colors whitespace-nowrap">
             uristkonsultant26@gmail.com
           </a>
+          <a href="https://www.instagram.com/alinatataruiurist" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-gold-400 text-sm transition-colors whitespace-nowrap">
+            Instagram
+          </a>
         </div>
       </div>
     </footer>
