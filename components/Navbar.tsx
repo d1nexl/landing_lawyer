@@ -78,7 +78,7 @@ export default function Navbar() {
               <button
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
-                className="text-sm text-white/60 hover:text-gold-400 transition-colors duration-200 font-sans tracking-wide"
+                className="text-base text-white/60 hover:text-gold-400 transition-colors duration-200 font-sans tracking-wide"
               >
                 {link.label}
               </button>
@@ -105,7 +105,7 @@ export default function Navbar() {
                   key={l.code}
                   onClick={() => setLang(l.code)}
                   className={clsx(
-                    'text-[11px] font-medium px-3 py-1 rounded-full transition-all duration-200',
+                    'text-xs font-medium px-3 py-1 rounded-full transition-all duration-200',
                     lang === l.code
                       ? 'bg-gold-500 text-navy-900 font-semibold'
                       : 'text-white/50 hover:text-white'

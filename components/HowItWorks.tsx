@@ -23,11 +23,11 @@ export default function HowItWorks() {
           transition={{ duration: 0.7 }}
           className="text-center mb-20"
         >
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">— {t.howItWorks.label} —</p>
+          <p className="text-gold-500 text-sm tracking-[0.25em] uppercase font-sans mb-4">— {t.howItWorks.label} —</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
             {t.howItWorks.title}
           </h2>
-          <p className="text-white/50 font-sans text-sm md:text-base leading-relaxed max-w-lg mx-auto">
+          <p className="text-white/50 font-sans text-base md:text-lg leading-relaxed max-w-lg mx-auto">
             {t.howItWorks.subtitle}
           </p>
         </motion.div>
@@ -57,10 +57,10 @@ export default function HowItWorks() {
                   </div>
                 </div>
 
-                <h3 className="font-display text-lg font-semibold text-white mb-3 leading-tight">
+                <h3 className="font-display text-xl font-semibold text-white mb-3 leading-tight">
                   {step.title}
                 </h3>
-                <p className="text-white/40 text-sm font-sans leading-relaxed">
+                <p className="text-white/40 text-base font-sans leading-relaxed">
                   {step.desc}
                 </p>
 
@@ -84,7 +84,7 @@ export default function HowItWorks() {
             href="https://wa.me/380979217886"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-semibold shadow-gold"
+            className="btn-gold inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold shadow-gold"
           >
             {t.howItWorks.cta}
           </a>

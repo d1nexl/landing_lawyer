@@ -81,11 +81,11 @@ export default function Contact() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">— {t.contact.label} —</p>
+          <p className="text-gold-500 text-sm tracking-[0.25em] uppercase font-sans mb-4">— {t.contact.label} —</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
             {t.contact.title}
           </h2>
-          <p className="text-white/50 font-sans text-sm md:text-base leading-relaxed max-w-lg mx-auto">
+          <p className="text-white/50 font-sans text-base md:text-lg leading-relaxed max-w-lg mx-auto">
             {t.contact.subtitle}
           </p>
         </motion.div>
@@ -126,8 +126,8 @@ export default function Contact() {
                     {c.icon}
                   </div>
                   <div>
-                    <p className="text-white/40 text-xs">{c.label}</p>
-                    <p className="text-white text-sm font-medium mt-0.5">{c.value}</p>
+                    <p className="text-white/40 text-sm">{c.label}</p>
+                    <p className="text-white text-base font-medium mt-0.5">{c.value}</p>
                   </div>
                 </motion.a>
               ))}

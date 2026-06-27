@@ -30,13 +30,13 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">
+          <p className="text-gold-500 text-sm tracking-[0.25em] uppercase font-sans mb-4">
             — {t.services.label} —
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
             {t.services.title}
           </h2>
-          <p className="text-white/50 max-w-xl mx-auto font-sans text-sm md:text-base leading-relaxed">
+          <p className="text-white/50 max-w-xl mx-auto font-sans text-base md:text-lg leading-relaxed">
             {t.services.subtitle}
           </p>
         </motion.div>
@@ -62,10 +62,10 @@ export default function Services() {
                 </div>
 
                 {/* Content */}
-                <h3 className="font-display text-lg font-semibold text-white mb-2 group-hover:text-gold-300 transition-colors duration-300">
+                <h3 className="font-display text-xl font-semibold text-white mb-2 group-hover:text-gold-300 transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-white/45 text-sm font-sans leading-relaxed">
+                <p className="text-white/45 text-base font-sans leading-relaxed">
                   {item.desc}
                 </p>
 

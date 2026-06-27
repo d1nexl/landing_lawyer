@@ -23,11 +23,11 @@ export default function Testimonials() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">— {t.testimonials.label} —</p>
+          <p className="text-gold-500 text-sm tracking-[0.25em] uppercase font-sans mb-4">— {t.testimonials.label} —</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
             {t.testimonials.title}
           </h2>
-          <p className="text-white/50 font-sans text-sm md:text-base leading-relaxed max-w-lg mx-auto">
+          <p className="text-white/50 font-sans text-base md:text-lg leading-relaxed max-w-lg mx-auto">
             {t.testimonials.subtitle}
           </p>
         </motion.div>
@@ -53,7 +53,7 @@ export default function Testimonials() {
               </div>
 
               {/* Text */}
-              <p className="text-white/70 font-sans text-sm leading-relaxed mb-6 relative z-10">
+              <p className="text-white/70 font-sans text-base leading-relaxed mb-6 relative z-10">
                 "{item.text}"
               </p>
 
@@ -63,8 +63,8 @@ export default function Testimonials() {
                   <span className="font-display text-base text-gold-400">{item.name[0]}</span>
                 </div>
                 <div>
-                  <p className="font-sans text-sm font-semibold text-white">{item.name}</p>
-                  <p className="text-xs text-white/40">{item.city}</p>
+                  <p className="font-sans text-base font-semibold text-white">{item.name}</p>
+                  <p className="text-sm text-white/40">{item.city}</p>
                 </div>
               </div>
 

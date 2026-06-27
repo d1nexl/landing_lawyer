@@ -24,11 +24,11 @@ export default function FAQ() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">— {t.faq.label} —</p>
+          <p className="text-gold-500 text-sm tracking-[0.25em] uppercase font-sans mb-4">— {t.faq.label} —</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
             {t.faq.title}
           </h2>
-          <p className="text-white/50 font-sans text-sm md:text-base leading-relaxed max-w-lg mx-auto">
+          <p className="text-white/50 font-sans text-base md:text-lg leading-relaxed max-w-lg mx-auto">
             {t.faq.subtitle}
           </p>
         </motion.div>
@@ -49,7 +49,7 @@ export default function FAQ() {
                 className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className={`font-sans text-sm md:text-base font-medium transition-colors duration-200 ${
+                <span className={`font-sans text-base md:text-lg font-medium transition-colors duration-200 ${
                   open === i ? 'text-gold-400' : 'text-white/80 group-hover:text-white'
                 }`}>
                   {item.q}
@@ -72,7 +72,7 @@ export default function FAQ() {
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   >
                     <div className="px-6 pb-5 border-t border-gold-500/10">
-                      <p className="text-white/55 font-sans text-sm leading-relaxed pt-4">
+                      <p className="text-white/55 font-sans text-base leading-relaxed pt-4">
                         {item.a}
                       </p>
                     </div>

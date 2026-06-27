@@ -117,12 +117,12 @@ export default function Hero() {
           </motion.h1>
 
           {/* Title */}
-          <motion.h2 variants={fadeUp} className="font-sans text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-lg">
+          <motion.h2 variants={fadeUp} className="font-sans text-xl md:text-2xl text-white/80 font-light leading-relaxed max-w-lg">
             {t.hero.title}
           </motion.h2>
 
           {/* Subtitle */}
-          <motion.p variants={fadeUp} className="font-sans text-sm md:text-base text-white/50 leading-relaxed max-w-md">
+          <motion.p variants={fadeUp} className="font-sans text-base md:text-lg text-white/50 leading-relaxed max-w-md">
             {t.hero.subtitle}
           </motion.p>
 
@@ -164,8 +164,8 @@ export default function Hero() {
               { val: '100%', label: t.hero.statOfficial },
             ].map((s, i) => (
               <div key={i} className="flex flex-col">
-                <span className="font-display text-2xl font-semibold text-gold-400">{s.val}</span>
-                <span className="text-xs text-white/40 mt-0.5">{s.label}</span>
+                <span className="font-display text-3xl font-semibold text-gold-400">{s.val}</span>
+                <span className="text-sm text-white/40 mt-0.5">{s.label}</span>
               </div>
             ))}
           </motion.div>

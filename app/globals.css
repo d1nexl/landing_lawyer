@@ -26,6 +26,7 @@ html {
 
 body {
   font-family: var(--font-inter);
+  font-size: 17px;
   background-color: var(--navy);
   color: white;
   -webkit-font-smoothing: antialiased;

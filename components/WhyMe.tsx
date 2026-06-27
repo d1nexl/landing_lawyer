@@ -59,13 +59,13 @@ export default function WhyMe() {
               transition={{ duration: 0.7 }}
               className="mb-12"
             >
-              <p className="text-gold-500 text-xs tracking-[0.3em] uppercase font-sans mb-4">
+              <p className="text-gold-500 text-sm tracking-[0.25em] uppercase font-sans mb-4">
                 — {t.whyMe.label} —
               </p>
               <h2 className="font-display text-4xl md:text-5xl font-semibold text-white mb-4">
                 {t.whyMe.title}
               </h2>
-              <p className="text-white/50 font-sans text-sm md:text-base leading-relaxed max-w-lg">
+              <p className="text-white/50 font-sans text-base md:text-lg leading-relaxed max-w-lg">
                 {t.whyMe.subtitle}
               </p>
             </motion.div>
@@ -86,8 +86,8 @@ export default function WhyMe() {
                       <Icon size={18} className="text-gold-500" />
                     </div>
                     <div>
-                      <h3 className="font-sans text-sm font-semibold text-white mb-1">{item.title}</h3>
-                      <p className="text-white/40 text-xs leading-relaxed">{item.desc}</p>
+                      <h3 className="font-sans text-base font-semibold text-white mb-1">{item.title}</h3>
+                      <p className="text-white/40 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </motion.div>
                 )
